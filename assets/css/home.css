@@ -1,0 +1,1265 @@
+.hero-slideshow {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-container {
+    height: 100%;
+    width: 100%;
+}
+
+.slider-container div {
+    width: 100%;
+    height: 100%;
+}
+
+.slider-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.slick-active img {
+    animation: kenBurnsEffect 4s ease-out forwards;
+}
+
+@keyframes kenBurnsEffect {
+    0% {
+        transform: scale(1.2) translateX(-7%) translateY(-7%);
+    }
+
+    100% {
+        transform: scale(1) translateX(0) translateY(0);
+    }
+}
+
+.slideshow-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    pointer-events: none;
+    padding: 0 2rem;
+}
+
+.hero-text {
+    background: rgba(75, 85, 122, 0.7);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    display: inline-block;
+    max-width: 90%;
+    margin-top: 40%;
+    margin-left: -20%;
+}
+
+.hero-text h1 {
+    font-size: 34px;
+    font-family: "PP Woodland Ultralight";
+    margin: 0;
+    color: white;
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 1.2;
+
+}
+
+.highlight {
+    font-weight: 700;
+    color: #f4c050;
+    font-family: "PP Woodland Ultralight";
+    margin-left: 10px;
+    transition: opacity 0.5s ease;
+}
+
+/* section2 */
+.bhavan-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 40px;
+    position: relative;
+    background: #fdfdf7;
+}
+
+.title-box {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.title {
+    font-size: 34px;
+    font-family: "PP Woodland Ultralight";
+    color: #444;
+    font-weight: 200;
+}
+
+.title span {
+    font-weight: 700;
+    font-family: "PP Woodland Ultralight";
+    color: #2f2f1e;
+}
+
+.underline {
+    width: 60px;
+    height: 4px;
+    background: #f4c050;
+    margin: 10px auto 0;
+}
+
+.bhavan-container {
+    display: flex;
+    gap: 50px;
+    background: none;
+    border-radius: 40px;
+    padding: 5px 50px;
+    z-index: 2;
+    max-width: 1280px;
+    align-items: center;
+}
+
+.image-box img {
+    border-radius: 30px;
+    height: 300px;
+    width: auto;
+    padding: 15px;
+    object-fit: cover;
+    border: 1.5px solid #f4c050;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.content-box {
+    max-width: 620px;
+}
+
+.description {
+    font-size: 19px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.explore-btn {
+    margin-top: 20px;
+    padding: 5px 20px;
+    background: transparent;
+    border: 1.5px solid #f4c050;
+    border-radius: 10px;
+    color: #f4a900;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+    background: #f4c050;
+    color: white;
+}
+
+.symbol {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    z-index: 0;
+}
+
+.left-symbol {
+    left: 0;
+    top: auto;
+    bottom: 0;
+}
+
+.right-symbol {
+    right: 0;
+    transform: scaleX(-1);
+}
+
+/* Base state */
+.animate-bhavan {
+    opacity: 0;
+    transform: translateY(20px);
+    will-change: transform, opacity;
+  }
+  
+  /* Active trigger */
+  .bhavan-in-view {
+    opacity: 1;
+  }
+  
+  /* Animation triggers */
+  .bhavan-rotate-in.bhavan-in-view {
+    animation: bhavanRotateIn 1s ease forwards;
+  }
+  
+  .bhavan-depth-in.bhavan-in-view {
+    animation: bhavanDepthIn 1s ease forwards;
+  }
+  
+  .bhavan-flip-left.bhavan-in-view {
+    animation: bhavanFlipLeft 1s ease forwards;
+  }
+  
+  .bhavan-scale-pop.bhavan-in-view {
+    animation: bhavanScalePop 0.7s ease forwards;
+  }
+  
+  /* Delays */
+  .delay-b0 { animation-delay: 0s; }
+  .delay-b1 { animation-delay: 0.3s; }
+  .delay-b2 { animation-delay: 0.6s; }
+  .delay-b3 { animation-delay: 0.9s; }
+  
+  /* Keyframes */
+  @keyframes bhavanRotateIn {
+    0% {
+      opacity: 0;
+      transform: rotateX(-90deg) translateY(-50px);
+      transform-origin: top;
+    }
+    100% {
+      opacity: 1;
+      transform: rotateX(0) translateY(0);
+    }
+  }
+  
+  @keyframes bhavanDepthIn {
+    0% {
+      opacity: 0;
+      transform: translateZ(-300px) scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: translateZ(0) scale(1);
+    }
+  }
+  
+  @keyframes bhavanFlipLeft {
+    0% {
+      opacity: 0;
+      transform: perspective(800px) rotateY(-90deg);
+      transform-origin: left;
+    }
+    100% {
+      opacity: 1;
+      transform: perspective(800px) rotateY(0deg);
+    }
+  }
+  
+  @keyframes bhavanScalePop {
+    0% {
+      opacity: 0;
+      transform: scale(0.5) rotateZ(-10deg);
+    }
+    80% {
+      transform: scale(1.05) rotateZ(2deg);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) rotateZ(0deg);
+    }
+  }
+  
+
+/* SECTION 3 */
+.stay-section {
+    background-color: #0c1a3c;
+    padding: 20px 60px;
+    color: white;
+    font-family: "PP Woodland Ultralight";
+    position: relative;
+    background-image: url('../images/logo-background-banner.png');
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* CENTERED HEADER */
+.stay-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.stay-title {
+    font-size: 34px;
+    font-weight: 200;
+    color: #ffffff;
+    font-family: "PP Woodland Ultralight";
+    margin-bottom: 10px;
+}
+
+.stay-title span {
+    color: #f4c050;
+    font-family: "PP Woodland Ultralight";
+    font-weight: 600;
+}
+
+.stay-underline {
+    width: 60px;
+    height: 4px;
+    background-color: #f4c050;
+    margin: 0 auto;
+}
+
+/* CONTAINER */
+.stay-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* TEXT SIDE */
+.stay-left {
+    flex: 1.2;
+    position: relative;
+    z-index: 2;
+}
+
+.stay-intro {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.stay-points {
+    list-style-type: disc;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #ffffff;
+}
+
+/* IMAGE SIDE */
+.stay-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.main-image-box {
+    position: relative;
+    border: 1px solid #f4c050;
+    border-radius: 14px;
+    padding: 10px;
+    width: 400px;
+}
+
+.main-image {
+    border-radius: 18px;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    padding: auto;
+    padding: 5px;
+}
+
+/* OVERLAY IMAGE */
+.overlap-image-box {
+    position: absolute;
+    top: 140px;
+    left: -110px;
+    padding: 5px;
+    /* border-radius: 12px; */
+    /* background: #ffffff; */
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); */
+}
+
+.overlap-image {
+    border-radius: 10px;
+    width: 300px;
+    height: auto;
+}
+
+/* section 4 */
+.room-section {
+    background-color: #f9f9f0;
+    padding: 60px 40px;
+    font-family: 'Poppins', sans-serif;
+    max-width: 1300px;
+    margin: auto;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.room-box {
+    display: flex;
+    border: 1px solid #f4c050;
+    margin-bottom: 12px;
+    border-radius: 0;
+    overflow: hidden;
+    background-color: #f9f9f0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    align-items: stretch;
+    position: relative;
+    transform: translateY(0);
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-play-state: paused;
+}
+
+.room-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(24, 36, 87, 0.15);
+}
+
+/* First and last border-radius */
+.room-box:first-child {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.room-box:last-child {
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.room-left {
+    width: 300px;
+    flex-shrink: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateX(-50px);
+}
+
+.room-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.room-box:hover .room-left img {
+    transform: scale(1.05);
+}
+
+/* Room right base */
+.room-right {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+.room-content {
+    flex: 1;
+    transform: translateX(-100px);
+    transition: transform 0.5s ease;
+}
+
+.room-box:hover .room-content {
+    transform: translateX(0);
+}
+
+.room-title {
+    font-size: 24px;
+    font-family: "PP Woodland Ultralight";
+    font-weight: 700;
+    color: #182457;
+    margin-bottom: 6px;
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+.room-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #f4c050;
+    transition: width 0.5s ease;
+}
+
+.room-box:hover .room-title::after {
+    width: 50px;
+}
+
+.room-desc {
+    font-size: 14px;
+    color: #666;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.room-arrow {
+    background-color: #18120d;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 99px;
+    font-size: 16px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.room-arrow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.room-box:hover .room-arrow::before {
+    left: 100%;
+}
+
+/* Hover effects */
+.room-box:hover {
+    background-color: #182457;
+}
+
+.room-box:hover .room-left {
+    opacity: 1;
+    transform: translateX(0) scale(1.05);
+}
+
+.room-box:hover .room-title,
+.room-box:hover .room-desc {
+    color: white;
+}
+
+.room-box:hover .room-desc {
+    opacity: 1;
+    transform: translateX(0);
+    max-height: 100px;
+    margin-top: 10px;
+}
+
+.room-box:hover .room-arrow {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Animation classes for section4 */
+.room-box.visible {
+    animation-play-state: running;
+}
+
+.room-box:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.room-box:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.room-box:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.room-box:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.room-right {
+    transition: all 0.5s ease;
+}
+
+.room-content {
+    transition: transform 0.5s ease;
+    transform: translateX(-100px);
+}
+
+.room-box:hover .room-content {
+    transform: translateX(0);
+}
+
+.room-title {
+    transition: all 0.5s ease;
+}
+
+.room-title::after {
+    transition: width 0.5s ease;
+}
+
+.room-box:hover .room-title::after {
+    width: 50px;
+}
+
+.room-desc {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateX(-50px);
+}
+
+.room-box:hover .room-desc {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.room-arrow {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.room-box:hover .room-arrow {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* section 5 */
+.room-detail-section {
+    background-color: #182457;
+    padding: 60px 40px;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    background-image: url('../images/logo-background-banner.png');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.room-detail-section .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.room-info {
+    flex: 1 1 300px;
+    max-width: 380px;
+}
+
+.room-info .tag {
+    background-color: #f4c050;
+    color: #1c1c1c;
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.text-box {
+    background-color: #f9f9f0;
+    color: #182457;
+    padding: 30px;
+    border-radius: 6px;
+}
+
+.text-box h2 {
+    font-size: 34px;
+    font-family: "PP Woodland Ultralight";
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.text-box p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.book-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 22px;
+    background-color: transparent;
+    color: #f4c050;
+    border: 1px solid #f4c050;
+    border-radius: 30px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.book-btn:hover {
+    background-color: #f4c050;
+    color: #182457;
+}
+
+.room-main-img {
+    flex: 1 1 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -4%;
+}
+
+.room-main-img img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+.room-gallery {
+    flex: 1 1 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.room-gallery img {
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+/* section 6 */
+.super-room {
+    margin-left: 5%;
+}
+
+.super-room1 {
+    margin-right: -10%;
+}
+
+/* === Animation Keyframes === */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* === Initial State === */
+.room-detail-section .room-info,
+.room-detail-section .room-main-img,
+.room-detail-section .room-gallery img {
+    opacity: 0;
+}
+
+/* === Animated State === */
+.room-info.animate-left {
+    animation: fadeInLeft 1s ease forwards;
+}
+
+.room-main-img.animate-up {
+    animation: fadeInUp 1s ease forwards;
+}
+
+.room-gallery img:nth-child(1).animate-right {
+    animation: fadeInRight 1s ease 0.4s forwards;
+}
+
+.room-gallery img:nth-child(2).animate-right {
+    animation: fadeInRight 1s ease 0.7s forwards;
+}
+
+/* section 7 */
+.room-wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.room-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.room-reversed {
+    flex-direction: row-reverse;
+}
+
+.room-photo img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.room-description {
+    flex: 1;
+    max-width: 600px;
+}
+
+.room-heading {
+    color: #003c71;
+    font-family: "PP Woodland Ultralight";
+    font-size: 34px;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.room-heading::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #f4c050;
+    margin-top: 5px;
+}
+
+.room-paragraph {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: none;
+    padding: 50px 0;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.feature-image img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 12px;
+}
+
+.feature-text {
+    flex: 1;
+    min-width: 300px;
+    max-width: 550px;
+}
+
+.feature-heading {
+    font-size: 34px;
+    font-family: "PP Woodland Ultralight";
+    color: #003c71;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+.feature-heading::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #f6c544;
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+.feature-list {
+    list-style: disc;
+    padding-left: 20px;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.feature-list li {
+    margin-bottom: 10px;
+}
+
+@keyframes fadeInSlideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInSlideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initial state */
+.room-photo,
+.room-description,
+.feature-image,
+.feature-text {
+    opacity: 0;
+}
+
+/* Animate */
+.animate-left {
+    animation: fadeInSlideLeft 1s ease forwards;
+}
+
+.animate-right {
+    animation: fadeInSlideRight 1s ease forwards;
+}
+
+.animate-up {
+    animation: fadeInUp 1s ease forwards;
+}
+
+
+/* secrtion 8 */
+.hotel-section {
+    background-color: #0d1540;
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    background-image: url('../images/logo-background-banner.png');
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Title with underline */
+.amenities-title {
+    font-size: 34px;
+    font-family: "PP Woodland Ultralight";
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.amenities-title span {
+    color: #f6c544;
+    font-family: "PP Woodland Ultralight";
+    font-weight: 700;
+    position: relative;
+}
+
+.amenities-title span::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: #f6c544;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+/* Grid layout for amenities */
+.amenities-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    max-width: 1000px;
+    margin: 0 auto 60px;
+}
+
+.amenity-box {
+    border: 1px solid #ffffff60;
+    padding: 20px;
+    border-radius: 6px;
+    width: 260px;
+    box-sizing: border-box;
+    text-align: left;
+    background-color: transparent;
+}
+
+.amenity-box h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #ffffff;
+}
+
+.amenity-box p {
+    font-size: 14px;
+    color: #c2c2c2;
+    margin: 0;
+}
+
+/* Hotel image and booking */
+.hotel-booking {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hotel-image {
+    position: relative;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+.hotel-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.hotel-view-label {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+/* Booking text */
+.booking-text h2 {
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.book-now-btn {
+    background-color: #f6c544;
+    color: #0d1540;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-now-btn:hover {
+    background-color: #dcb033;
+}
+
+/* Animation classes for section2 */
+.bhavan-section .title-box {
+    animation: fadeInDown 1s ease-out;
+}
+
+.bhavan-section .title span {
+    display: inline-block;
+    animation: fadeInUp 0.8s ease-out 0.3s forwards;
+}
+
+.bhavan-section .underline {
+    animation: expandWidth 0.6s ease-out 0.6s forwards;
+}
+
+.bhavan-section .bhavan-container {
+    animation: fadeIn 1s ease-out 0.8s forwards;
+}
+
+.bhavan-section .image-box img {
+    animation: scaleIn 1s ease-out 1s forwards;
+}
+
+.bhavan-section .content-box {
+    animation: slideInRight 1s ease-out 1.2s forwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes expandWidth {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animate On Scroll - Initial hidden */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: opacity, transform;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fade and Zoom utility */
+.animate-fade.visible {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.animate-zoom.visible {
+    animation: zoomIn 0.8s ease forwards;
+}
+
+/* Delay utilities */
+.delay-0 {
+    animation-delay: 0s;
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
+
+.delay-4 {
+    animation-delay: 0.8s;
+}
+
+.delay-5 {
+    animation-delay: 1s;
+}
+
+.delay-6 {
+    animation-delay: 1.2s;
+}
+
+.delay-7 {
+    animation-delay: 1.4s;
+}
