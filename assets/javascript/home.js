@@ -130,3 +130,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
     animatedElements.forEach(el => observer.observe(el));
 });
+
+// Vertical Carousel for Section 3
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.querySelector('.overlap-carousel');
+    const images = carousel.querySelectorAll('.overlap-image');
+    let currentIndex = 0;
+    let isAnimating = false;
+
+    // Set initial state
+    images[0].classList.add('active');
+
+    function nextSlide() {
+        if (isAnimating) return;
+        isAnimating = true;
+
+        const currentImage = images[currentIndex];
+        currentImage.classList.remove('active');
+        currentImage.classList.add('prev');
+
+        currentIndex = (currentIndex + 1) % images.length;
+        const nextImage = images[currentIndex];
+        nextImage.classList.add('active');
+
+        // Reset animation state after transition
+        setTimeout(() => {
+            currentImage.classList.remove('prev');
+            isAnimating = false;
+        }, 800);
+    }
+
+    // Auto-advance slides every 3 seconds
+    setInterval(nextSlide, 3000);
+});
