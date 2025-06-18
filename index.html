@@ -45,6 +45,30 @@
                 <a href="#">CONTACT</a>
             </nav>
         </header>
+
+        <!-- === FULL‑SCREEN OVERLAY MENU (initially off‑canvas) === -->
+        <div class="overlay-menu" id="overlayMenu">
+            <div class="menu-left">
+                <span class="close-btn" onclick="closeMenu()">×</span>
+                <ul class="menu-items">
+                    <li onmouseover="showImage('home')" onclick="showImage('home')"><strong>Home</strong></li>
+                    <li onmouseover="showImage('discover')" onclick="showImage('discover')">Discover</li>
+                    <li onmouseover="showImage('rooms')" onclick="showImage('rooms')">Rooms</li>
+                    <li onmouseover="showImage('bathroom')" onclick="showImage('bathroom')">Bathroom</li>
+                    <li onmouseover="showImage('amenities')" onclick="showImage('amenities')">Room Amenities</li>
+                    <li onmouseover="showImage('contact')" onclick="showImage('contact')">Contact</li>
+                </ul>
+
+                <p class="tagline">
+                    A place where you can be with yourself and your loved ones…
+                </p>
+            </div>
+
+            <div class="menu-right" id="menuImagesContainer">
+                <!-- JS will dynamically insert images here -->
+            </div>
+        </div>
+
         <!-- Hero Section -->
         <section class="hero-slideshow">
             <div class="slider-container">
@@ -52,7 +76,7 @@
                 <div><img src="assets/images/section1-img2.png" alt="Slide 2" /></div>
                 <div><img src="assets/images/section1-img3.png" alt="Slide 3" /></div>
             </div>
-8
+            8
             <div class="slideshow-overlay">
                 <div class="hero-text">
                     <h1 class="line1">

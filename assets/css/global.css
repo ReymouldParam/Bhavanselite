@@ -130,6 +130,163 @@
     letter-spacing: 0.5px;
 }
 
+/* === OVERLAY MENU STYLES === */
+.overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #1f1a1a;
+    color: #fff;
+    display: flex;
+    z-index: 9999;
+    transform: translateX(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    font-family: "PP Woodland Ultralight", sans-serif;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* When active, show the menu */
+.overlay-menu.active {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* === LEFT PANEL === */
+.menu-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5%;
+}
+
+/* Close button */
+.menu-left .close-btn {
+    font-size: 24px;
+    color: #ffc107;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 40px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1.5px solid #ffc107;
+    border-radius: 50%;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menu-left .close-btn:hover {
+    background-color: #ffc107;
+    color: #1f1a1a;
+}
+
+/* Menu items list */
+.menu-left .menu-items {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+}
+
+.menu-left .menu-items li {
+    font-size: 22px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+    position: relative;
+    /* Important for ::after positioning */
+}
+
+/* Hover effect */
+.menu-left .menu-items li:hover {
+    color: #ffc107;
+}
+
+/* Active state */
+.menu-left .menu-items li.active {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+/* === HORIZONTAL CONNECTOR LINE === */
+.menu-left .menu-items li.active::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: calc(100% + -100px);
+    transform: translateY(-50%);
+    width: 200px;
+    height: 2px;
+    background-color: #ffc107;
+}
+
+/* Tagline */
+.menu-left .tagline {
+    color: #ffc107;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 20px;
+    max-width: 300px;
+}
+
+/* === RIGHT PANEL (IMAGES) === */
+.menu-right {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.menu-right img.menu-image {
+    width: calc(50% - 20px);
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-right img.menu-image:hover {
+    transform: scale(1.03);
+}
+
+/* === RESPONSIVE STYLES === */
+@media screen and (max-width: 768px) {
+    .overlay-menu {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .menu-left,
+    .menu-right {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .menu-left .menu-items li {
+        font-size: 18px;
+    }
+
+    .menu-right img.menu-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .menu-left .menu-items li.active::after {
+        display: none;
+        /* Optional: hide connector line on mobile */
+    }
+}
+
+
 /* footer  */
 .footer-section {
     font-family: 'Poppins', sans-serif;
