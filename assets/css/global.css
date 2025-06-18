@@ -661,3 +661,262 @@
         display: none !important;
     }
 }
+
+/* ===== HD DESKTOP (1920px - 2559px) ===== */
+@media screen and (min-width: 1920px) {
+    .header-wrapper {
+        padding-top: 30px;
+    }
+    
+    .header-container {
+        width: 90%;
+        max-width: 1800px;
+        border-radius: 15px;
+    }
+    
+    .header-container.scrolled-container {
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    .top-bar {
+        padding: 20px 50px;
+    }
+    
+    .menu-section {
+        gap: 15px;
+    }
+    
+    .menu-section span {
+        font-size: 24px;
+    }
+    
+    .menu-icon {
+        width: 35px;
+    }
+    
+    .logo-icon {
+        height: 60px;
+    }
+    
+    .book-now {
+        padding: 8px 20px;
+        font-size: 22px;
+        border-radius: 8px;
+    }
+    
+    .nav-bar {
+        gap: 50px;
+        padding: 15px 0;
+        margin-top: 15px;
+    }
+    
+    .nav-bar a {
+        font-size: 16px;
+        letter-spacing: 0.8px;
+    }
+    
+    /* Overlay Menu HD */
+    .overlay-menu {
+        padding: 0 10%;
+    }
+    
+    .menu-left {
+        padding-left: 8%;
+    }
+    
+    .menu-left .close-btn {
+        font-size: 28px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        margin-bottom: 50px;
+    }
+    
+    .menu-left .menu-items li {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+    
+    .menu-left .tagline {
+        font-size: 20px;
+        line-height: 1.6;
+        max-width: 400px;
+    }
+    
+    .menu-right img.menu-image {
+        width: 500px;
+        height: 400px;
+    }
+}
+
+/* ===== FULL HD DESKTOP (2560px+) ===== */
+@media screen and (min-width: 2560px) {
+    .header-wrapper {
+        padding-top: 40px;
+    }
+    
+    .header-container {
+        width: 95%;
+        max-width: 2400px;
+        border-radius: 20px;
+    }
+    
+    .top-bar {
+        padding: 25px 70px;
+    }
+    
+    .menu-section {
+        gap: 20px;
+    }
+    
+    .menu-section span {
+        font-size: 28px;
+    }
+    
+    .menu-icon {
+        width: 40px;
+    }
+    
+    .logo-icon {
+        height: 70px;
+    }
+    
+    .book-now {
+        padding: 10px 25px;
+        font-size: 24px;
+        border-radius: 10px;
+    }
+    
+    .nav-bar {
+        gap: 60px;
+        padding: 20px 0;
+        margin-top: 20px;
+    }
+    
+    .nav-bar a {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    
+    /* Overlay Menu Full HD */
+    .overlay-menu {
+        padding: 0 12%;
+    }
+    
+    .menu-left {
+        padding-left: 10%;
+    }
+    
+    .menu-left .close-btn {
+        font-size: 32px;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        margin-bottom: 60px;
+    }
+    
+    .menu-left .menu-items li {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    
+    .menu-left .tagline {
+        font-size: 24px;
+        line-height: 1.6;
+        max-width: 500px;
+    }
+    
+    .menu-right img.menu-image {
+        width: 600px;
+        height: 500px;
+    }
+}
+
+/* ===== MAC DEVICES (1440px - 1919px) - OPTIMIZED ===== */
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+    .header-wrapper {
+        padding-top: 25px;
+    }
+    
+    .header-container {
+        width: 85%;
+        max-width: 1400px;
+        border-radius: 12px;
+    }
+    
+    .header-container.scrolled-container {
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    .top-bar {
+        padding: 15px 40px;
+    }
+    
+    .menu-section {
+        gap: 12px;
+    }
+    
+    .menu-section span {
+        font-size: 22px;
+    }
+    
+    .menu-icon {
+        width: 32px;
+    }
+    
+    .logo-icon {
+        height: 55px;
+    }
+    
+    .book-now {
+        padding: 6px 18px;
+        font-size: 21px;
+        border-radius: 7px;
+    }
+    
+    .nav-bar {
+        gap: 45px;
+        padding: 12px 0;
+        margin-top: 12px;
+    }
+    
+    .nav-bar a {
+        font-size: 15px;
+        letter-spacing: 0.6px;
+    }
+    
+    /* Overlay Menu Mac */
+    .overlay-menu {
+        padding: 0 8%;
+    }
+    
+    .menu-left {
+        padding-left: 6%;
+    }
+    
+    .menu-left .close-btn {
+        font-size: 26px;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        margin-bottom: 45px;
+    }
+    
+    .menu-left .menu-items li {
+        font-size: 26px;
+        margin-bottom: 22px;
+    }
+    
+    .menu-left .tagline {
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 350px;
+    }
+    
+    .menu-right img.menu-image {
+        width: 450px;
+        height: 350px;
+    }
+}
