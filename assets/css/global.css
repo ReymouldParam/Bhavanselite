@@ -412,3 +412,252 @@
     margin-top: 15px;
     color: #aaaaaa;
 }
+
+/* ===== HEADER RESPONSIVENESS - MOBILE FIRST ===== */
+
+/* Mobile (320px - 767px) - Default */
+@media screen and (max-width: 767px) {
+    .header-wrapper {
+        padding-top: 10px;
+        width: 100%;
+    }
+    
+    .header-container {
+        width: 95%;
+        max-width: 100%;
+        margin: 0 auto;
+        border-radius: 8px;
+    }
+    
+    .top-bar {
+        padding: 8px 12px;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .menu-section {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .menu-section span {
+        font-size: 14px;
+    }
+    
+    .menu-icon {
+        width: 20px;
+        height: auto;
+    }
+    
+    .logo-section {
+        flex: 1;
+        text-align: center;
+    }
+    
+    .logo-icon {
+        height: 30px;
+        width: auto;
+        max-width: 100%;
+    }
+    
+    .book-now {
+        font-size: 12px;
+        padding: 4px 8px;
+        white-space: nowrap;
+    }
+    
+    .nav-bar {
+        gap: 20px;
+        padding: 8px 0;
+        font-size: 12px;
+    }
+    
+    .nav-bar a {
+        font-size: 12px;
+    }
+    
+    /* Overlay Menu Mobile */
+    .overlay-menu {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .menu-left {
+        padding-left: 0;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .menu-left .close-btn {
+        font-size: 20px;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        margin-bottom: 30px;
+    }
+    
+    .menu-left .menu-items li {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    
+    .menu-left .tagline {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    
+    .menu-right img.menu-image {
+        width: 100%;
+        max-width: 300px;
+        height: 200px;
+    }
+}
+
+/* Small Mobile (320px - 480px) */
+@media screen and (max-width: 480px) {
+    .header-container {
+        width: 98%;
+        border-radius: 6px;
+    }
+    
+    .top-bar {
+        padding: 6px 8px;
+        gap: 5px;
+    }
+    
+    .menu-section {
+        font-size: 12px;
+        gap: 3px;
+    }
+    
+    .menu-icon {
+        width: 18px;
+    }
+    
+    .logo-icon {
+        height: 25px;
+    }
+    
+    .book-now {
+        font-size: 11px;
+        padding: 3px 6px;
+    }
+    
+    .nav-bar {
+        gap: 15px;
+        padding: 6px 0;
+    }
+    
+    .nav-bar a {
+        font-size: 11px;
+    }
+}
+
+/* Tablet (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .header-container {
+        width: 90%;
+    }
+    
+    .top-bar {
+        padding: 10px 20px;
+    }
+    
+    .menu-section span {
+        font-size: 18px;
+    }
+    
+    .logo-icon {
+        height: 40px;
+    }
+    
+    .book-now {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+    
+    .nav-bar {
+        gap: 30px;
+    }
+    
+    .nav-bar a {
+        font-size: 13px;
+    }
+}
+
+/* Medium Desktop (1024px - 1439px) */
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .header-container {
+        width: 85%;
+    }
+    
+    .top-bar {
+        padding: 12px 25px;
+    }
+    
+    .logo-icon {
+        height: 45px;
+    }
+    
+    .book-now {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+}
+
+/* Large Desktop (1440px+) */
+@media screen and (min-width: 1440px) {
+    .header-container {
+        width: 80%;
+    }
+    
+    .top-bar {
+        padding: 12px 30px;
+    }
+    
+    .logo-icon {
+        height: 50px;
+    }
+    
+    .book-now {
+        font-size: 20px;
+        padding: 8px 16px;
+    }
+}
+
+/* Landscape Mobile */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    .header-wrapper {
+        padding-top: 5px;
+    }
+    
+    .header-container {
+        width: 90%;
+    }
+    
+    .top-bar {
+        padding: 6px 15px;
+    }
+    
+    .logo-icon {
+        height: 25px;
+    }
+    
+    .book-now {
+        font-size: 14px;
+        padding: 4px 10px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .header-wrapper,
+    .nav-bar,
+    .overlay-menu {
+        display: none !important;
+    }
+}
