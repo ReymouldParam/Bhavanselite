@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms</title>
+    <!-- font-family -->
+    <link href="https://db.onlinewebfonts.com/c/2018cd9b79da9f4d8f0f38f8b6bc34cb?family=PP+Woodland+Ultralight"
+        rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/bbd240e1bd4f028574ea83bae258bd9f?family=PP+Woodland" rel="stylesheet">
+    <!-- Jquery -->
+    <!-- jQuery first -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Then Slick CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <!-- Then your custom CSS -->
+    <link rel="stylesheet" href="./assets/css/global.css" />
+    <link rel="stylesheet" href="./assets/css/contact.css" />
+    <link rel="stylesheet" href="./assets/css/rooms.css" />
+</head>
+
+<body>
+    <div>
+        <!-- header -->
+        <header class="header-wrapper">
+            <!-- Top Rounded Bar -->
+            <div class="header-container">
+                <div class="top-bar">
+                    <div class="menu-section hover-scale">
+                        <img src="assets/images/menu-logo.svg" alt="Menu Icon" class="menu-icon" />
+                        <span>Menu</span>
+                    </div>
+                    <div class="logo-section animate-bounce-in">
+                        <img src="assets/images/website-logo.svg" alt="Bhavans Logo" class="logo-icon" />
+                    </div>
+                    <button class="book-now btn-animate">Book Now</button>
+                </div>
+            </div>
+        </header>
+        <!-- === FULL‑SCREEN OVERLAY MENU (initially off‑canvas) === -->
+        <div class="overlay-menu" id="overlayMenu">
+            <div class="menu-left">
+                <span class="close-btn" onclick="closeMenu()">×</span>
+                <ul class="menu-items">
+                    <li onmouseover="showImage('home')" onclick="showImage('home')"><strong>Home</strong></li>
+                    <li onmouseover="showImage('discover')" onclick="showImage('discover')">Discover</li>
+                    <li onmouseover="showImage('rooms')" onclick="showImage('rooms')">Rooms</li>
+                    <li onmouseover="showImage('bathroom')" onclick="showImage('bathroom')">Bathroom</li>
+                    <li onmouseover="showImage('amenities')" onclick="showImage('amenities')">Room Amenities</li>
+                    <li onmouseover="showImage('contact')" onclick="showImage('contact')">Contact</li>
+                </ul>
+
+                <p class="tagline">
+                    A place where you can be with yourself and your loved ones…
+                </p>
+            </div>
+
+            <div class="menu-right" id="menuImagesContainer">
+                <!-- JS will dynamically insert images here -->
+            </div>
+        </div>
+        <!-- banner section  -->
+        <section class="contact-hero">
+            <div class="contact-blur-overlay parallax-bg">
+                <div class="contact-content stagger-animation">
+                    <h2 class="contact-heading">
+                        OUR <span>ROOMS</span>
+                    </h2>
+                    <p class="contact-subtext">
+                        Step into a space where timeless charm meets modern sophistication.
+                        At Bhavans Elite, hospitality is not just service — it's a carefully crafted experience.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- rroms section -->
+        <section>
+            <!-- Classic Room -->
+            <div class="classic-room">
+                <div class="room-content">
+                    <div class="room-title">Classic Room</div>
+                    <div class="room-desc">Step into a space where timeless charm meets modern sophistication. At
+                        Bhavans
+                        Elite, hospitality is not just service — it’s a carefully crafted experience. Every corner is
+                        designed to reflect comfort, elegance, and care. Whether you’re here for leisure or business
+                    </div>
+                    <div class="room-amenities">
+                        Room Amenities:<br>
+                        <span>• Desk • Flat-screen TV • Wake-up Service</span>
+                    </div>
+                    <div class="room-thumbs">
+                        <img src="assets/images/stay-img1.png" alt="Thumb 1">
+                        <img src="assets/images/stay-img2.png" alt="Thumb 2">
+                    </div>
+                </div>
+                <div class="room-main-img">
+                    <img src="assets/images/section1-img2.png" alt="Classic Room">
+                </div>
+            </div>
+            <!-- super rooms  -->
+            <div class="superior-room">
+                <div class="room-main-img2">
+                    <img src="assets/images/section1-img2.png" alt="Classic Room">
+                </div>
+                <div class="room-content2">
+                    <div class="room-title">Super Rooms</div>
+                    <div class="room-desc">Step into a space where timeless charm meets modern sophistication. At
+                        Bhavans
+                        Elite, hospitality is not just service — it’s a carefully crafted experience. Every corner is
+                        designed to reflect comfort, elegance, and care. Whether you’re here for leisure or business
+                    </div>
+                    <div class="room-amenities">
+                        Room Amenities:<br>
+                        <span>• Desk • Flat-screen TV • Wake-up Service</span>
+                    </div>
+                    <div class="room-thumbs">
+                        <img src="assets/images/stay-img1.png" alt="Thumb 1">
+                        <img src="assets/images/stay-img2.png" alt="Thumb 2">
+                    </div>
+                </div>
+            </div>
+            <!-- Deluxe Rooms -->
+            <div class="classic-room">
+                <div class="room-content">
+                    <div class="room-title">Deluxe Rooms</div>
+                    <div class="room-desc">Step into a space where timeless charm meets modern sophistication. At
+                        Bhavans
+                        Elite, hospitality is not just service — it’s a carefully crafted experience. Every corner is
+                        designed to reflect comfort, elegance, and care. Whether you’re here for leisure or business
+                    </div>
+                    <div class="room-amenities">
+                        Room Amenities:<br>
+                        <span>• Desk • Flat-screen TV • Wake-up Service</span>
+                    </div>
+                    <div class="room-thumbs">
+                        <img src="assets/images/stay-img1.png" alt="Thumb 1">
+                        <img src="assets/images/stay-img2.png" alt="Thumb 2">
+                    </div>
+                </div>
+                <div class="room-main-img">
+                    <img src="assets/images/section1-img2.png" alt="Classic Room">
+                </div>
+            </div>
+            <!-- family rooms  -->
+            <div class="superior-room">
+                <div class="room-main-img2">
+                    <img src="assets/images/section1-img2.png" alt="Classic Room">
+                </div>
+                <div class="room-content2">
+                    <div class="room-title">Family Rooms</div>
+                    <div class="room-desc">Step into a space where timeless charm meets modern sophistication. At
+                        Bhavans
+                        Elite, hospitality is not just service — it’s a carefully crafted experience. Every corner is
+                        designed to reflect comfort, elegance, and care. Whether you’re here for leisure or business
+                    </div>
+                    <div class="room-amenities">
+                        Room Amenities:<br>
+                        <span>• Desk • Flat-screen TV • Wake-up Service</span>
+                    </div>
+                    <div class="room-thumbs">
+                        <img src="assets/images/stay-img1.png" alt="Thumb 1">
+                        <img src="assets/images/stay-img2.png" alt="Thumb 2">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Room Amenities Section with Vertical Carousel -->
+        <section class="amenities-section">
+            <div class="amenities-content">
+                <h2>Room Amenities</h2>
+                <div class="underline"></div>
+                <p>Step into a space where timeless charm meets modern sophistication.</p>
+                <ul>
+                    <li><span></span>Desk</li>
+                    <li><span></span>Flat-screen TV</li>
+                    <li><span></span>Wake-up Service</li>
+                    <li><span></span>Non-smoking throughout</li>
+                    <li><span></span>Air Conditioning</li>
+                    <li><span></span>Clothes Rack</li>
+                </ul>
+            </div>
+            <div class="amenities-carousel">
+                <div class="carousel-wrapper">
+                    <div class="carousel-slide">
+                        <img src="assets/images/stay-img1.png" alt="Reception 1">
+                        <img src="assets/images/stay-img2.png" alt="Reception 2">
+                        <img src="assets/images/stay-img3.png" alt="Reception 3">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- location highlights section -->
+        <section class="location-highlight-section">
+            <h2 class="location-title">Perfectly Positioned. Effortlessly Connected.</h2>
+            <div class="location-underline"></div>
+
+            <div class="location-grid">
+                <div class="location-box">
+                    <img src="assets/images/flight-icon.svg" alt="Airport Icon" />
+                    <p>Just 15 Minutes from Hyderabad International Airport</p>
+                </div>
+                <div class="location-box">
+                    <img src="assets/images/train-icon.svg" alt="Metro Icon" />
+                    <p>Easy Access to Metro & Business Hubs</p>
+                </div>
+                <div class="location-box border-left">
+                    <img src="assets/images/cart-icon.svg" alt="Shopping Icon" />
+                    <p>5 Minutes to Major Shopping Districts</p>
+                </div>
+                <div class="location-box border-left">
+                    <img src="assets/images/cofee-icon.svg" alt="Dining Icon" />
+                    <p>Close to Iconic Attractions and Dining</p>
+                </div>
+            </div>
+        </section>
+        <!-- Section 8 -->
+        <section class="hotel-section">
+
+            <div class="hotel-booking">
+                <div class="hotel-image animate-on-scroll animate-zoom delay-1">
+                    <img src="./assets/images/hotel-view.png" alt="Hotel View">
+                    <p class="hotel-view-label">Hotel View</p>
+                </div>
+                <div class="booking-text animate-on-scroll animate-fade delay-2">
+                    <h2>Book Your Stay</h2>
+                    <button class="book-now-btn">Book Now</button>
+                </div>
+            </div>
+        </section>
+        <!-- Footer Main Section -->
+        <section class="footer-section">
+            <div class="footer-top">
+                <div class="footer-left">
+                    <img src="./assets/images/section1-img1.png" alt="Room 1">
+                    <img src="./assets/images/section1-img2.png" alt="Room 2">
+                    <img src="./assets/images/section1-img3.png" alt="Room 3">
+                </div>
+                <div class="footer-middle">
+                    <h2>Get Direction</h2>
+                    <div class="footer-arrow-line">→</div>
+                    <button class="book-btn-outline">Book Now</button>
+                </div>
+                <div class="footer-right">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="100%"
+                        style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Bottom Footer Content -->
+            <div class="footer-bottom">
+                <div class="footer-contact">
+                    <div class="contact-item">
+                        <img src="assets/images/location-outline.svg" alt="location" />
+                        <div>
+                            <p class="label">Address</p>
+                            <p>Rajiv Gandhi International Airport, Hyderabad<br>Telangana, India - 500072</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <img src="assets/images/mail-outline.svg" alt="mail" />
+                        <p>Bhavanselite@Gmail.Com</p>
+                    </div>
+                    <div class="contact-item">
+                        <img src="assets/images/call-outline.svg" alt="Cal" />
+                        <p>+385 20 300 300</p>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <a href="#">FACEBOOK</a>
+                    <a href="#">CONTACT US</a>
+                    <a href="#">INSTAGRAM</a>
+                    <a href="#">PRIVACY POLICY AND COOKIES</a>
+                    <a href="#">PINTEREST</a>
+                    <a href="#">WRITTEN COMPLAINTS</a>
+                </div>
+
+                <div class="footer-copy">
+                    <p>Bhavans@2025 All Rights Reserved</p>
+                    <p>Design & Development by Reymould</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <!-- Slick JS after jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- home -->
+    <script src="assets/javascript/home.js">
+    </script>
+    <!-- header js -->
+    <script src="assets/javascript/global.js"></script>
+    <!-- animation js -->
+    <script src="assets/js/animations.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover</title>
+    <!-- jQuery first -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- font-family -->
+    <link href="https://db.onlinewebfonts.com/c/2018cd9b79da9f4d8f0f38f8b6bc34cb?family=PP+Woodland+Ultralight" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/bbd240e1bd4f028574ea83bae258bd9f?family=PP+Woodland" rel="stylesheet">
+    <!-- Then your custom CSS -->
+    <link rel="stylesheet" href="./assets/css/global.css" />
+    <link rel="stylesheet" href="./assets/css/contact.css" />
+    <link rel="stylesheet" href="./assets/css/discover.css" />
+
+</head>
+
+<body>
+    <div>
+        <!-- header -->
+        <header class="header-wrapper">
+            <!-- Top Rounded Bar -->
+            <div class="header-container">
+                <div class="top-bar">
+                    <div class="menu-section hover-scale">
+                        <img src="assets/images/menu-logo.svg" alt="Menu Icon" class="menu-icon" />
+                        <span>Menu</span>
+                    </div>
+                    <div class="logo-section animate-bounce-in">
+                        <img src="assets/images/website-logo.svg" alt="Bhavans Logo" class="logo-icon" />
+                    </div>
+                    <button class="book-now btn-animate">Book Now</button>
+                </div>
+            </div>
+        </header>
+        <!-- === FULL‑SCREEN OVERLAY MENU (initially off‑canvas) === -->
+        <div class="overlay-menu" id="overlayMenu">
+            <div class="menu-left">
+                <span class="close-btn" onclick="closeMenu()">×</span>
+                <ul class="menu-items">
+                    <li onmouseover="showImage('home')" onclick="showImage('home')"><strong>Home</strong></li>
+                    <li onmouseover="showImage('discover')" onclick="showImage('discover')">Discover</li>
+                    <li onmouseover="showImage('rooms')" onclick="showImage('rooms')">Rooms</li>
+                    <li onmouseover="showImage('bathroom')" onclick="showImage('bathroom')">Bathroom</li>
+                    <li onmouseover="showImage('amenities')" onclick="showImage('amenities')">Room Amenities</li>
+                    <li onmouseover="showImage('contact')" onclick="showImage('contact')">Contact</li>
+                </ul>
+
+                <p class="tagline">
+                    A place where you can be with yourself and your loved ones…
+                </p>
+            </div>
+
+            <div class="menu-right" id="menuImagesContainer">
+                <!-- JS will dynamically insert images here -->
+            </div>
+        </div>
+        <!-- banner section  -->
+        <section class="contact-hero">
+            <div class="contact-blur-overlay parallax-bg">
+                <div class="contact-content stagger-animation">
+                    <h2 class="contact-heading">
+                        DISCOVER <span>US</span>
+                    </h2>
+                    <p class="contact-subtext">
+                        Step into a space where timeless charm meets modern sophistication.
+                        At Bhavans Elite, hospitality is not just service — it's a carefully crafted experience.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Discover Bhavan Section -->
+        <section class="discover-section">
+            <div class="discover-text">
+                <h2>Discover <span>Bhavan</span></h2>
+                <p>
+                    Step into a space where timeless charm meets modern sophistication. At Bhavans Elite, hospitality is
+                    not just service — it’s a carefully crafted experience. Every corner is designed to reflect comfort,
+                    elegance, and care. Whether you’re here for leisure or business, we promise a stay that feels
+                    effortless and memorable. Welcome to a world where every detail is thoughtfully curated — just for
+                    you.
+                </p>
+            </div>
+            <div class="discover-image">
+                <img src="assets/images/section1-img1.png" alt="Hotel Bhavan Elite">
+            </div>
+        </section>
+
+        <!-- Room Detail Section -->
+        <section class="room-highlight-section">
+            <div class="room-left-image">
+                <img src="assets/images/section1-img2.png" alt="Room Sofa">
+            </div>
+            <div class="room-right-text">
+                <div class="room-block">
+                    <h3>Our <span>Room</span></h3>
+                    <p>
+                        Step into a space where timeless charm meets modern sophistication. At Bhavans Elite,
+                        hospitality is not just service — it’s a carefully crafted experience. Every corner is designed
+                        to reflect comfort, elegance, and care. Whether you’re here for leisure or business
+                    </p>
+                </div>
+                <div class="room-block">
+                    <h3>Room <span>Amenities</span></h3>
+                    <p>
+                        Step into a space where timeless charm meets modern sophistication. At Bhavans Elite,
+                        hospitality is not just service — it’s a carefully crafted experience. Every corner is designed
+                        to reflect comfort, elegance, and care. Whether you’re here for leisure or business
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="offer-banner-section">
+            <div class="offer-left-bar">
+                <img src="assets/images/verical-logo.svg" alt="Bhavans Elite Logo" />
+            </div>
+
+            <div class="offer-carousel-wrapper">
+                <div class="offer-carousel" id="offerCarousel">
+                    <img src="assets/images/stay-img3.png" alt="Room 1" />
+                    <img src="assets/images/stay-img2.png" alt="Room 2" />
+                    <img src="assets/images/stay-img1.png" alt="Room 3" />
+                </div>
+            </div>
+
+
+            <div class="offer-text-box">
+                <h4>WINTER OFFER</h4>
+                <p class="subtext">Comfortable rooms with impressive views.</p>
+                <h2>Deluxe Room</h2>
+                <div class="discount">20% Off</div>
+                <button class="book-now">Book Now</button>
+            </div>
+        </section>
+
+
+    </div>
+    <!-- Slick JS after jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- home -->
+    <script src="assets/javascript/home.js">
+    </script>
+    <!-- header js -->
+    <script src="assets/javascript/global.js"></script>
+    <!-- animation js -->
+    <script src="assets/js/animations.js"></script>
+    <script>
+        const carousel = document.getElementById('offerCarousel');
+        const images = carousel.querySelectorAll('img');
+        let index = 0;
+
+        setInterval(() => {
+            index++;
+            if (index >= images.length) {
+                index = 0;
+            }
+            carousel.style.transform = `translateX(-${index * 100}%)`;
+        }, 1000); // every 4 seconds
+    </script>
+</body>
+
+</html>

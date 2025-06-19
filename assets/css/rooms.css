@@ -1,0 +1,596 @@
+.classic-room {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 2% 1%;
+    background-color: #0c1a40;
+    align-items: flex-start;
+}
+.superior-room {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 30px; */
+    padding: 2% 1%;
+    background-color: #0c1a40;
+    align-items: flex-start;
+
+}
+
+
+.room-content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2%;
+}
+.room-content2 {
+    display: flex;
+    flex-direction: column;
+    padding-right: 2%;
+}
+
+.room-title {
+    font-family: "PP Woodland";
+    font-weight: 700;
+    font-size: 34px;
+    color: #f2b321;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.room-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.room-amenities {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.room-amenities span {
+    color: #f2b321;
+}
+
+.room-thumbs {
+    display: flex;
+    gap: 4%;
+    margin-top: 4%;
+    padding-bottom: 2%;
+    border-bottom: 1.5px solid #f2b321;
+}
+
+.room-thumbs img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.room-main-img {
+    width: 100%;
+    padding: 3%;
+    border: 1.5px solid #f2b321;
+    border-right: none;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    transform: translateX(2%);
+}
+.room-main-img2 {
+    width: 100%;
+    padding: 3%;
+    border: 1.5px solid #f2b321;
+    border-left: none;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    transform: translateX(-6%);
+}
+.room-main-img2 img {
+    width: 100%;
+    padding: 10px;
+    border-radius: 40px;
+}
+
+.room-main-img img {
+    width: 100%;
+    padding: 10px;
+    border-radius: 40px;
+}
+
+@media screen and(max-width: 768px) {
+    .classic-room,
+    .superior-room,
+    .deluxe-room,
+    .family-room {
+        grid-template-columns: 1fr;
+        direction: ltr;
+    }
+}
+/* amenties section */
+
+.amenities-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #F7F7EEAB;
+    backdrop-filter: blur(8px);
+    padding: 60px;
+    /* border-radius: 30px; */
+    gap: 60px;
+    color: #2e3222;
+    font-family: 'Playfair Display', serif;
+}
+
+.amenities-content {
+    flex: 1;
+}
+
+.amenities-content h2 {
+    font-size: 34px;
+    font-family: "PP Woodland";
+    color: #003087;
+    margin-bottom: 0;
+}
+
+.underline {
+    width: 80px;
+    height: 5px;
+    background: #f2b321;
+    margin: 8px 0 20px;
+}
+
+.amenities-content p {
+    font-size: 18px;
+    color: #4c4c4c;
+    margin-bottom: 30px;
+}
+
+.amenities-content ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 40px;
+    list-style: none;
+    padding: 0;
+    font-size: 20px;
+    color: #2e3222;
+}
+
+.amenities-content li {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.amenities-content li span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #2e3222;
+    margin-right: 10px;
+}
+
+.amenities-carousel {
+    flex: 1;
+    max-width: 500px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 30px;
+    position: relative;
+}
+
+.carousel-wrapper {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-slide {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    animation: verticalSlide 12s infinite;
+}
+
+.carousel-slide img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    flex-shrink: 0;
+}
+
+@keyframes verticalSlide {
+    0% {
+        transform: translateY(0%);
+    }
+    25% {
+        transform: translateY(0%);
+    }
+    33% {
+        transform: translateY(-100%);
+    }
+    58% {
+        transform: translateY(-100%);
+    }
+    66% {
+        transform: translateY(-200%);
+    }
+    91% {
+        transform: translateY(-200%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@media(max-width: 768px) {
+    .amenities-section {
+        flex-direction: column;
+        padding: 30px;
+    }
+    .amenities-carousel {
+        max-width: 100%;
+        height: 250px;
+    }
+    .carousel-slide img {
+        height: 250px;
+    }
+}
+/* highliting location */
+.location-highlight-section {
+    background: rgba(219, 222, 219, 0.81);
+    padding: 60px 40px;
+    /* border-radius: 20px; */
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+.location-title {
+    font-size: 34px;
+    font-family: "PP Woodland";
+    color: #003087;
+    margin-bottom: 10px;
+}
+
+.location-underline {
+    width: 70px;
+    height: 4px;
+    background-color: #f2b321;
+    margin: 0 auto 40px;
+}
+
+.location-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.location-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e1e1e;
+    padding-left: 30px;
+}
+
+.location-box img {
+    width: 80px;
+    height: 80px;
+    background-color: #0c1a40;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+/* .border-left {
+    border-left: 1px solid #d2dbe3;
+    padding-left: 30px;
+} */
+
+@media(max-width: 768px) {
+    .location-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .border-left {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .location-box {
+        padding-right: 0;
+    }
+}
+
+
+/* secrtion 8 */
+.hotel-section {
+    background-color: #0d1540;
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    background-image: url('../images/logo-background-banner.png');
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Title with underline */
+.amenities-title {
+    font-size: 34px;
+    font-family: "PP Woodland Ultralight";
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.amenities-title span {
+    color: #f6c544;
+    font-family: "PP Woodland Ultralight";
+    font-weight: 700;
+    position: relative;
+}
+
+.amenities-title span::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: #f6c544;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+/* Grid layout for amenities */
+.amenities-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    max-width: 1000px;
+    margin: 0 auto 60px;
+}
+
+.amenity-box {
+    border: 1px solid #ffffff60;
+    padding: 20px;
+    border-radius: 6px;
+    width: 260px;
+    box-sizing: border-box;
+    text-align: left;
+    background-color: transparent;
+}
+
+.amenity-box h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #ffffff;
+}
+
+.amenity-box p {
+    font-size: 14px;
+    color: #c2c2c2;
+    margin: 0;
+}
+
+/* Hotel image and booking */
+.hotel-booking {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hotel-image {
+    position: relative;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+.hotel-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.hotel-view-label {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+/* Booking text */
+.booking-text h2 {
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.book-now-btn {
+    background-color: #f6c544;
+    color: #0d1540;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-now-btn:hover {
+    background-color: #dcb033;
+}
+
+/* Animation classes for section2 */
+.bhavan-section .title-box {
+    animation: fadeInDown 1s ease-out;
+}
+
+.bhavan-section .title span {
+    display: inline-block;
+    animation: fadeInUp 0.8s ease-out 0.3s forwards;
+}
+
+.bhavan-section .underline {
+    animation: expandWidth 0.6s ease-out 0.6s forwards;
+}
+
+.bhavan-section .bhavan-container {
+    animation: fadeIn 1s ease-out 0.8s forwards;
+}
+
+.bhavan-section .image-box img {
+    animation: scaleIn 1s ease-out 1s forwards;
+}
+
+.bhavan-section .content-box {
+    animation: slideInRight 1s ease-out 1.2s forwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes expandWidth {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animate On Scroll - Initial hidden */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: opacity, transform;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fade and Zoom utility */
+.animate-fade.visible {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.animate-zoom.visible {
+    animation: zoomIn 0.8s ease forwards;
+}
+
+/* Delay utilities */
+.delay-0 {
+    animation-delay: 0s;
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
+
+.delay-4 {
+    animation-delay: 0.8s;
+}
+
+.delay-5 {
+    animation-delay: 1s;
+}
+
+.delay-6 {
+    animation-delay: 1.2s;
+}
+
+.delay-7 {
+    animation-delay: 1.4s;
+}
