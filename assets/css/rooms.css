@@ -6,6 +6,7 @@
     background-color: #0c1a40;
     align-items: flex-start;
 }
+
 .superior-room {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -22,6 +23,7 @@
     flex-direction: column;
     padding-left: 2%;
 }
+
 .room-content2 {
     display: flex;
     flex-direction: column;
@@ -79,6 +81,7 @@
     border-bottom-left-radius: 40px;
     transform: translateX(2%);
 }
+
 .room-main-img2 {
     width: 100%;
     padding: 3%;
@@ -88,6 +91,7 @@
     border-bottom-right-radius: 40px;
     transform: translateX(-6%);
 }
+
 .room-main-img2 img {
     width: 100%;
     padding: 10px;
@@ -101,6 +105,7 @@
 }
 
 @media screen and(max-width: 768px) {
+
     .classic-room,
     .superior-room,
     .deluxe-room,
@@ -109,6 +114,7 @@
         direction: ltr;
     }
 }
+
 /* amenties section */
 
 .amenities-section {
@@ -121,7 +127,7 @@
     /* border-radius: 30px; */
     gap: 60px;
     color: #2e3222;
-    font-family: 'Playfair Display', serif;
+    /* font-family: 'Playfair Display', serif; */
 }
 
 .amenities-content {
@@ -206,21 +212,27 @@
     0% {
         transform: translateY(0%);
     }
+
     25% {
         transform: translateY(0%);
     }
+
     33% {
         transform: translateY(-100%);
     }
+
     58% {
         transform: translateY(-100%);
     }
+
     66% {
         transform: translateY(-200%);
     }
+
     91% {
         transform: translateY(-200%);
     }
+
     100% {
         transform: translateY(0%);
     }
@@ -231,14 +243,17 @@
         flex-direction: column;
         padding: 30px;
     }
+
     .amenities-carousel {
         max-width: 100%;
         height: 250px;
     }
+
     .carousel-slide img {
         height: 250px;
     }
 }
+
 /* highliting location */
 .location-highlight-section {
     background: rgba(219, 222, 219, 0.81);
