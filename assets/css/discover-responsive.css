@@ -1,0 +1,314 @@
+/* Responsive styles for discover.html (excluding header/global) */
+
+/* HD (1366px) */
+@media (max-width: 1400px) {
+
+    .discover-section,
+    .room-highlight-section {
+        padding: 20px 10px;
+    }
+
+    .discover-text h2,
+    .room-block h3 {
+        font-size: 28px;
+    }
+
+    .offer-banner-section,
+    .offer-carousel-wrapper {
+        height: 220px;
+    }
+
+    .offer-left-bar img {
+        height: 140px;
+    }
+}
+
+/* MacBook Pro 14" (1440px) */
+@media (max-width: 1500px) {
+
+    .discover-section,
+    .room-highlight-section {
+        padding: 24px 16px;
+    }
+
+    .offer-banner-section,
+    .offer-carousel-wrapper {
+        height: 240px;
+    }
+
+    .offer-left-bar img {
+        height: 160px;
+    }
+}
+
+/* Full HD (1920px) */
+@media (min-width: 1800px) {
+
+    .discover-section,
+    .room-highlight-section {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 40px 60px;
+    }
+
+    .discover-text h2,
+    .room-block h3 {
+        font-size: 40px;
+    }
+
+    .room-right-text {
+        justify-content: space-around;
+    }
+
+    .offer-banner-section,
+    .offer-carousel-wrapper {
+        height: 320px;
+    }
+
+    .offer-left-bar img {
+        height: 220px;
+    }
+}
+
+/* Mac Retina (2560px) */
+@media (min-width: 2200px) {
+
+    .discover-section,
+    .room-highlight-section {
+        max-width: 2000px;
+        margin: 0 auto;
+        padding: 60px 120px;
+    }
+
+    .discover-text h2,
+    .room-block h3 {
+        font-size: 48px;
+    }
+
+    .offer-banner-section,
+    .offer-carousel-wrapper {
+        height: 400px;
+    }
+
+    .offer-left-bar img {
+        height: 300px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+    .discover-section,
+    .room-highlight-section {
+        flex-direction: column;
+        padding: 24px 8px;
+    }
+
+    .discover-image,
+    .room-left-image {
+        margin-right: 0;
+        max-width: 100%;
+    }
+
+    .offer-banner-section,
+    .offer-carousel-wrapper {
+        height: 180px;
+    }
+
+    .offer-left-bar img {
+        height: 100px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .discover-section,
+    .room-highlight-section {
+        padding: 10px 2vw;
+    }
+
+    .discover-text h2,
+    .room-block h3 {
+        font-size: 20px;
+    }
+
+    .proximity-container {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding: 0
+    }
+
+    .discover-text p,
+    .room-block p,
+    .proximity-item p {
+        font-size: 13px;
+    }
+
+    .offer-banner-section,
+    .offer-carousel-wrapper {
+        height: 200px;
+        /* width: 40%; */
+    }
+
+    .offer-left-bar {
+        width: 40px;
+    }
+
+    .offer-left-bar img {
+        height: 40px;
+    }
+
+    .offer-text-box {
+        width: 100%;
+        height: auto;
+        padding: 5px 0;
+    }
+
+    .book-now {
+        padding: 4px;
+        font-size: 12px;
+
+    }
+
+    .discount {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .offer-text-box h2 {
+        font-size: 14px;
+    }
+
+    ont .proximity-container {
+        width: 100%;
+        padding: 8px 2vw;
+    }
+}
+
+/* Footer Section Mobile (match home) */
+@media screen and (max-width: 767px) {
+    .footer-section {
+        /* padding: 20px 0; */
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .footer-left {
+        height: 150px;
+        gap: 8px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .footer-left img {
+        height: 100%;
+        width: 33.33%;
+        object-fit: cover;
+        max-width: 33.33%;
+    }
+
+    .footer-middle {
+        text-align: center;
+        padding: 20px 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .footer-middle h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .footer-arrow-line {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+
+    .book-btn-outline {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+
+    .footer-right {
+        height: 200px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .footer-right iframe {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
+
+    .footer-bottom {
+        padding: 20px 15px;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .footer-contact {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contact-item img {
+        width: 24px;
+        height: 24px;
+        margin: 0 auto;
+    }
+
+    .contact-item .label {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .contact-item p {
+        font-size: 11px;
+        line-height: 1.3;
+        word-wrap: break-word;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .footer-links a {
+        font-size: 11px;
+        padding: 5px 0;
+    }
+
+    .footer-copy {
+        text-align: center;
+        gap: 5px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .footer-copy p {
+        font-size: 10px;
+        line-height: 1.3;
+    }
+}

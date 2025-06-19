@@ -310,6 +310,10 @@
 } */
 
 @media(max-width: 768px) {
+    .location-highlight-section {
+        padding: 0 0 0 10px;
+    }
+
     .location-grid {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -317,11 +321,18 @@
 
     .border-left {
         border-left: none;
-        padding-left: 0;
+        padding-left: 15px;
     }
 
     .location-box {
         padding-right: 0;
+        padding-left: 0;
+
+    }
+
+    .location-box img {
+
+        /* height: 40px; */
     }
 }
 
