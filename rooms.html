@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rooms</title>
     <!-- font-family -->
-    <link href="https://db.onlinewebfonts.com/c/2018cd9b79da9f4d8f0f38f8b6bc34cb?family=PP+Woodland+Ultralight" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/2018cd9b79da9f4d8f0f38f8b6bc34cb?family=PP+Woodland+Ultralight"
+        rel="stylesheet">
     <link href="https://db.onlinewebfonts.com/c/bbd240e1bd4f028574ea83bae258bd9f?family=PP+Woodland" rel="stylesheet">
     <!-- Jquery -->
     <!-- jQuery first -->
@@ -44,12 +45,18 @@
             <div class="menu-left">
                 <span class="close-btn" onclick="closeMenu()">×</span>
                 <ul class="menu-items">
-                    <li onmouseover="showImage('home')" onclick="showImage('home')"><strong>Home</strong></li>
-                    <li onmouseover="showImage('discover')" onclick="showImage('discover')">Discover</li>
-                    <li onmouseover="showImage('rooms')" onclick="showImage('rooms')">Rooms</li>
-                    <li onmouseover="showImage('bathroom')" onclick="showImage('bathroom')">Bathroom</li>
-                    <li onmouseover="showImage('amenities')" onclick="showImage('amenities')">Room Amenities</li>
-                    <li onmouseover="showImage('contact')" onclick="showImage('contact')">Contact</li>
+                    <a href="./index.html" style="text-decoration: none; color: white;">
+                        <li onmouseover="showImage('home')" onclick="showImage('home')"><strong>Home</strong></li>
+                    </a>
+                    <a href="./discover.html" style="text-decoration: none; color: white;">
+                        <li onmouseover="showImage('discover')" onclick="showImage('discover')">Discover</li>
+                    </a>
+                    <a href="./rooms.html" style="text-decoration: none; color: white;">
+                        <li onmouseover="showImage('rooms')" onclick="showImage('rooms')">Rooms</li>
+                    </a>
+                    <a href="./contact.html" style="text-decoration: none; color: white;">
+                        <li onmouseover="showImage('contact')" onclick="showImage('contact')">Contact</li>
+                    </a>
                 </ul>
 
                 <p class="tagline">
@@ -243,7 +250,8 @@
                     <button class="book-btn-outline">Book Now</button>
                 </div>
                 <div class="footer-right">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="100%"
+                        style="border:0;" allowfullscreen="" loading="lazy">
                     </iframe>
                 </div>
             </div>
