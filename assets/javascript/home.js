@@ -16,7 +16,8 @@ $(document).ready(function () {
         adaptiveHeight: true,
         vertical: false,
         verticalSwiping: false,
-        lazyLoad: 'ondemand'
+        lazyLoad: 'progressive'  // or just remove it
+
     });
 
     $('.slider-container').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
